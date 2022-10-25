@@ -1,0 +1,12 @@
+TARGETS = prod/policy_engine/tool \
+		  prod/policy_engine/policymgr \
+		  prod/policy_engine/pe \
+		  prod/policy_engine/unittest \
+		  prod/celog/celog \
+          prod/QueryCloudAZ/QueryCloudAZSDK \
+          prod/QueryCloudAZSDK_C++/QueryCloudAZSDKCpp \
+          prod/TCPFrame/frame \
+          prod/TCPFrame/main \
+          prod/SDKWrapper \
+          prod/SkyDrmRestHelp 
+		  

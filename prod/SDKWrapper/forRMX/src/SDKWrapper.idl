@@ -1,0 +1,254 @@
+// SDKWrapper.idl : IDL source for SDKWrapper
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SDKWrapper.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+//only for SFB, INLTag, INLTagManager
+[
+	object,
+	uuid(FC7185B7-9C8A-44CD-B699-3563378E97EB),
+	dual,
+	nonextensible,
+	helpstring("INLTag Interface"),
+	pointer_default(unique)
+]
+interface INLTag : IDispatch {
+	[id(1), helpstring("method: initialize basic information")] HRESULT Init([in] BSTR bstrTagValueSeparator, [in] VARIANT_BOOL bIgnoreCaseForTagName, [in] VARIANT_BOOL bIgnoreCaseForTagValue);
+	[id(2), helpstring("method: clear information")] HRESULT Clear([in] VARIANT_BOOL bClearInitFlags);
+	[id(3), helpstring("method: get initialize flag")] HRESULT IsInited([out] VARIANT_BOOL* pbInitFlag);
+
+	[id(4), helpstring("method: get tag item count")] HRESULT GetTagCount([out] LONG* plTagCount);
+	[id(5), helpstring("method: get separator which used to split tag values")] HRESULT GetTagValueSeparator([out] BSTR* pbstrTagValueSeparator);
+
+	[id(6), helpstring("method: get tag item by tag name")] HRESULT GetFirstTag([out] BSTR* pbstrName, [out] BSTR* pbstrValue);
+	[id(7), helpstring("method: get tag item by tag name")] HRESULT GetNextTag([out] BSTR* pbstrName, [out] BSTR* pbstrValue);
+	[id(8), helpstring("method: get tag item by tag name")] HRESULT IsEnd([out] VARIANT_BOOL* pbIsEnd);
+
+	[id(9), helpstring("method: get tag item by tag name")] HRESULT GetTagByName([in] BSTR bstrName, [out] BSTR* pbstrValue);
+
+	[id(10), helpstring("method: set tag")] HRESULT SetTag([in] BSTR bstrName, [in] BSTR bstrValue, [in] int nOperationType);
+
+	[id(11), helpstring("method: delete tag by tag name")] HRESULT DeleteTagByName([in] BSTR bstrName);
+	[id(12), helpstring("method: delete all tags")] HRESULT DeleteAllTags();
+};
+[
+	object,
+	uuid(60531C31-DFFE-4031-8C7F-B71B1D07865C),
+	dual,
+	nonextensible,
+	helpstring("INLTagManager Interface"),
+	pointer_default(unique)
+]
+interface INLTagManager : IDispatch {
+	[id(1), helpstring("method: read tags from file")] HRESULT ReadTag([in] BSTR bstrFilePath, [in] int nOperationType, [in, out] INLTag** pINLTag);
+
+	[id(2), helpstring("method: write tags into file, always replace")] HRESULT WriteTag([in] BSTR bstrFilePath, [in] INLTag* pINLTag);
+
+	[id(3), helpstring("method: remove tags from file")] HRESULT RemoveTag([in] BSTR bstrFilePath, [in] INLTag* pINLTag);
+	[id(4), helpstring("method: remove all tags from file")] HRESULT RemoveAllTags([in] BSTR bstrFilePath);
+};
+
+
+[
+    object,
+    uuid(2B73E3D9-3C60-4144-AEED-1E65763D3569),
+    dual,
+    nonextensible,
+    helpstring("ICEAttres Interface"),
+    pointer_default(unique)
+]
+interface ICEAttres : IDispatch{
+    [id(1), helpstring("method: add attribute into interface")] HRESULT add_attre([in] BSTR strName, [in] BSTR strValue);
+    [id(2), helpstring("method retrieve attribute base on id")] HRESULT get_attre([in] LONG nIndex, [out] BSTR* strName, [out] BSTR* strValue);
+    [id(3), helpstring("method get attributes count")] HRESULT get_count([out] LONG* lCount);
+};
+[
+    object,
+    uuid(4F678751-FC19-4D0F-96CA-E1CC82E57A60),
+    dual,
+    nonextensible,
+    helpstring("IObligation Interface"),
+    pointer_default(unique)
+]
+interface IObligation : IDispatch{
+    [id(1), helpstring("method get obligation name")] HRESULT get_name(BSTR* bstrOBName);
+    [id(2), helpstring("method get_policyname")] HRESULT get_policyname([out] BSTR* strPolicyName);
+    [id(3), helpstring("method get ob's attres pair interface")] HRESULT get_attres([out] ICEAttres** pAttres);
+};
+[
+    object,
+    uuid(C0026D90-DD77-42C5-94EB-72EB08DE1EB9),
+    dual,
+    nonextensible,
+    helpstring("IRequest Interface"),
+    pointer_default(unique)
+]
+interface IRequest : IDispatch{
+    [id(1), helpstring("method set_action")] HRESULT set_action([in] BSTR strAction);
+    [id(2), helpstring("method set_param,0 src,1 dst,2 nameattres")] HRESULT set_param([in] BSTR strString,[in] BSTR strStrType,[in] ICEAttres* pAttres, [in] LONG lType);
+    [id(3), helpstring("method set_user")] HRESULT set_user([in] BSTR strsid, [in] BSTR strname, [in] ICEAttres* pAttres);
+    [id(4), helpstring("method set_app")] HRESULT set_app([in] BSTR strname, [in] BSTR strpath, [in] BSTR strurl, [in] ICEAttres* pAttres);
+    [id(5), helpstring("method set_recipient")] HRESULT set_recipient([in] BSTR strRecipient);
+    [id(6), helpstring("method set_performObligation, 1 is perform, otherwise is 0")] HRESULT set_performObligation([in] LONG lPerformOB);
+    [id(7), helpstring("method set_noiseLevel")] HRESULT set_noiseLevel([in] LONG lNoiseLevel);
+    [id(8), helpstring("method set_logObligationInfo")] HRESULT set_logObligationInfo([in] BSTR bstrLogIdentifier, [in] BSTR bstrObligationName, [in] ICEAttres* pAttres);
+};
+
+[
+    object,
+    uuid(BD599C22-02FD-4E16-9138-16DAB27A76C7),
+    dual,
+    nonextensible,
+    helpstring("IQueryPC Interface"),
+    pointer_default(unique)
+]
+interface IQueryPC : IDispatch{
+    [id(1), helpstring("method get_cookie, unique id,used for query")] HRESULT get_cookie([out] LONG* lCookie);
+    [id(2), helpstring("method set_request")] HRESULT set_request([in] IRequest* pRequest,[in]LONG lCookie);
+    [id(3), helpstring("method check_resource")] HRESULT check_resource([in] LONG lCookie, [in] LONG lTimeout, LONG lNeedAssignObs, [out]LONG* lResult);
+	[id(4), helpstring("method get_obligation")] HRESULT get_obligation([in] LONG lCookie, [in] BSTR strOBName, [in] LONG nIndexOfResults, [in] LONG nIndexOfOb,[out] IObligation** pObligation);
+    [id(5), helpstring("method check_resourceex")] HRESULT check_resourceex([in] LONG lCookie, [in] BSTR strPQL, [in] LONG lIngoreBuiltinPolicy, [in] LONG lTimeout, LONG lNeedAssignObs, LONG* lResult);
+    [id(6), helpstring("method get_result")] HRESULT get_result([in] LONG lCookie, [in] LONG nIndexOfResults, [out] LONG* lResult, [out] LONG* plObsNum);
+    [id(7), helpstring("method release all resource that used by query")] HRESULT release_request([in] LONG lCookie);
+    [id(8), helpstring("method get_all_obligations")] HRESULT get_all_obligations([in] LONG lCookie, [in] LONG nIndexOfResults, [in,out] IObligation** pObligations, [in] LONG lObsNum);	
+    [id(9), helpstring("method check_resourceex_json")] HRESULT check_resourceex_json([in] BSTR strRequest, [out] BSTR *strResponse, LONG* lResult);
+    [id(10), helpstring("method log_obligationdata")] HRESULT log_obligationdata([in] LONG lCookie, [out]LONG* lResult);
+    [id(11), helpstring("method set_ip_number")] HRESULT set_ip_number([in] LONG ipNumber);
+};
+
+[
+    object,
+    uuid(325178CC-DA13-4ED3-8E38-9FA930F569B6),
+    dual,
+    nonextensible,
+    pointer_default(unique)
+]
+interface INLRightsManager : IDispatch{
+    //[id(1), helpstring("Encrypt a file and convert it to NXL format.")] HRESULT NLEncrypt([in] BSTR bstrInPath, [in] BSTR bstrOutPath, [out, retval] LONG* lResult);
+	[id(1), helpstring("Encrypt a file and convert it to NXL format Use token group.")] HRESULT NLEncryptTokenGroup([in] INT tokenGroupType, [in] BSTR bstrInPath, [in] BSTR bstrOutPath, [in] SAFEARRAY(BSTR) arrayTagKey, [in] SAFEARRAY(BSTR) arrayTagValue, [out, retval] LONG* lResult);
+	[id(2), helpstring("Encrypt a file and convert it to NXL format Use project.")] HRESULT NLEncryptProject([in] BSTR  proectName, [in] BSTR bstrInPath, [in] BSTR bstrOutPath, [in] SAFEARRAY(BSTR) arrayTagKey, [in] SAFEARRAY(BSTR) arrayTagValue,[out, retval] LONG* lResult);
+    [id(3), helpstring("Decrypt a NXL file.")] HRESULT NLDecrypt([in] BSTR bstrInPath, [in] BSTR bstrOutPath, [out, retval] LONG* lResult);
+    [id(4), helpstring("Read the tag by index.")] HRESULT NLReadTags([in] BSTR bstrInPath, [in] LONG index, [out] BSTR* bstrName, [out] BSTR* bstrValue, [out, retval] LONG* lResult);
+    [id(5), helpstring("Update tags without re-encrypting the file.")] HRESULT NLUpdateTags([in] BSTR bstrInPath, [out, retval] LONG* lResult);
+    [id(6), helpstring("Check a NXL file.")] HRESULT NLIsNxl([in] BSTR bstrInPath, [out] BOOL* bNxl, [out, retval] LONG* lResult);
+    [id(7), helpstring("Get the count of tags.")] HRESULT NLGetTagsCount([in] BSTR bstrInPath, [out] LONG* lCount, [out, retval] LONG* lResult);
+	[id(10), helpstring("Init class, set config")] HRESULT InitializeClass([in] BSTR bstrRouteUrl, [in] BSTR bstrAppkey, [in] int appID);
+};
+
+[
+    object,
+    uuid(4BA69F5E-E3A5-4D6B-B3DC-117B71E7696B), 
+    dual,
+    nonextensible,
+    pointer_default(unique)   
+]
+interface IFileTagManager : IDispatch{
+    [id(1)] HRESULT GetTagsCount([in] BSTR bstrFilePath, [out] LONG* lCount, [out, retval] LONG* lResult);
+    [id(2)] HRESULT GetTagByIndex([in] BSTR bstrFilePath, [in] LONG lIndex, [out] BSTR* btsrTagName, [out] BSTR* btsrTagValue, [out, retval] LONG* lResult);
+    [id(3)] HRESULT SetUpdateTag([in] BSTR bstrTagName, [in] BSTR bstrTagValue, [out, retval] LONG* lResult);
+    [id(4)] HRESULT ClearUpdateSetTags([out, retval] LONG* lResult);
+    [id(5)] HRESULT UpdateFileTag([in] BSTR bstrFilePath, [in] BOOL bOverWrite, [out, retval] LONG* lResult);
+	[id(6)] HRESULT UpdateFileTagWithTagMethod([in] BSTR bstrFilePath, [in] BOOL bOverWrite, [out, retval] LONG* lResult);
+};
+
+[
+	object,
+	uuid(5D7063CB-D069-40BC-A5DD-27CEFC2307DD),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IGlobalConfig : IDispatch {
+	[id(1)] HRESULT SetCommonLibPath([in] BSTR bstrCommonLibPath);
+};
+
+[
+	uuid(446EDA37-1AE1-4E8C-A3F1-5084439DA7D5),
+	version(1.0),
+        helpstring("SDKWrapper 1.0 Type Library For RMX")
+]
+library SDKWrapperLib
+{
+    importlib("stdole2.tlb");
+    [
+        uuid(B084417B-7A9F-4C83-A0B6-1178AE33A8C1),
+        helpstring("CEAttres Class for RMX")
+    ]
+    coclass CEAttres
+    {
+        [default] interface ICEAttres;
+    };
+    [
+        uuid(17203775-F60B-4472-8FF5-3A7177D997F0),
+        helpstring("Obligation Class for RMX")
+    ]
+    coclass Obligation
+    {
+        [default] interface IObligation;
+    };
+    [
+        uuid(B08B7CE3-15C7-48C6-97E4-3171A5E47F8F),
+        helpstring("QueryPC Class for RMX")
+    ]
+    coclass QueryPC
+    {
+        [default] interface IQueryPC;
+    };
+    [
+        uuid(BCCB6C98-A429-4683-ADB1-3379FBB3A37B),
+        helpstring("Request Class for RMX")
+    ]
+    coclass Request
+    {
+        [default] interface IRequest;
+    };
+
+    [
+        uuid(148D759E-5CD1-4CF2-90EB-A36BD68110AE),
+        helpstring("NLRightsManager Class  for RMX")
+    ]
+    coclass NLRightsManager
+    {
+        [default] interface INLRightsManager;
+    };
+    
+    [
+        uuid(5DB9F41D-6BDB-49C3-BBB4-20A7D83E92F4),
+        helpstring("FileTagManager Class  for RMX")
+    ]
+    
+    coclass FileTagManager
+    {
+    	[default] interface IFileTagManager;
+    };
+
+	[
+		uuid(431C7C65-66E7-47CC-828A-48696D81764D),
+		helpstring("NLTagManager Class  for RMX")
+	]
+	coclass NLTagManager
+	{
+		[default] interface INLTagManager;
+	};
+	[
+		uuid(21EE2152-F96D-4C55-ACCB-F2780C838E61),
+		helpstring("NLTag Class  for RMX")
+	]
+	coclass NLTag
+	{
+		[default] interface INLTag;
+	};
+
+	[
+		uuid(C4BD1FA9-D779-4BF9-9A4C-A5B739388D30),
+		helpstring("GlobalConfig class")
+	]
+	coclass GlobalConfig
+	{
+		[default] interface IGlobalConfig;
+	};
+};

@@ -1,0 +1,26 @@
+HKCR
+{
+	SDKWrapper4RMX.GlobalConfig.1 = s 'GlobalConfig Class for RMX'
+	{
+		CLSID = s '{C4BD1FA9-D779-4BF9-9A4C-A5B739388D30}'
+	}
+	SDKWrapper4RMX.GlobalConfig = s 'GlobalConfig Class for RMX'
+	{
+		CLSID = s '{C4BD1FA9-D779-4BF9-9A4C-A5B739388D30}'
+		CurVer = s 'SDKWrapper4RMX.GlobalConfig.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C4BD1FA9-D779-4BF9-9A4C-A5B739388D30} = s 'GlobalConfig Class for RMX'
+		{
+			ProgID = s 'SDKWrapper4RMX.GlobalConfig.1'
+			VersionIndependentProgID = s 'SDKWrapper.NLTag'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{446EDA37-1AE1-4E8C-A3F1-5084439DA7D5}'
+		}
+	}
+}

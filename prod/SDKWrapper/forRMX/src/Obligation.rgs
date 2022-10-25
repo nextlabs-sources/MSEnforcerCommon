@@ -1,0 +1,26 @@
+HKCR
+{
+	SDKWrapper4RMX.Obligation.1 = s 'Obligation Class for RMX'
+	{
+		CLSID = s '{17203775-F60B-4472-8FF5-3A7177D997F0}'
+	}
+	SDKWrapper4RMX.Obligation = s 'Obligation Class for RMX'
+	{
+		CLSID = s '{17203775-F60B-4472-8FF5-3A7177D997F0}'
+		CurVer = s 'SDKWrapper.Obligation.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {17203775-F60B-4472-8FF5-3A7177D997F0} = s 'Obligation Class for RMX'
+		{
+			ProgID = s 'SDKWrapper4RMX.Obligation.1'
+			VersionIndependentProgID = s 'SDKWrapper4RMX.Obligation'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{446EDA37-1AE1-4E8C-A3F1-5084439DA7D5}'
+		}
+	}
+}

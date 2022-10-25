@@ -1,0 +1,26 @@
+HKCR
+{
+	SDKWrapper4RMX.NLTag.1 = s 'NLTag Class for RMX'
+	{
+		CLSID = s '{21EE2152-F96D-4C55-ACCB-F2780C838E61}'
+	}
+	SDKWrapper4RMX.NLTag = s 'NLTag Class'
+	{
+		CLSID = s '{21EE2152-F96D-4C55-ACCB-F2780C838E61}'
+		CurVer = s 'SDKWrapper.QueryPC.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {21EE2152-F96D-4C55-ACCB-F2780C838E61} = s 'NLTag Class for RMX'
+		{
+			ProgID = s 'SDKWrapper4RMX.NLTag.1'
+			VersionIndependentProgID = s 'SDKWrapper4RMX.NLTag'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{446EDA37-1AE1-4E8C-A3F1-5084439DA7D5}'
+		}
+	}
+}

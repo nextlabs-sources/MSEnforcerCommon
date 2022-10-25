@@ -1,0 +1,14 @@
+.dashColLeft {
+    width: 220px;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    float: left;
+    background-color: #fff;
+}
+.dashColRight {
+    height: 100%;
+    background-color: #fff;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}

@@ -1,0 +1,24 @@
+.attr-row {
+    font-size: 0;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+.attr-row:last-child {
+    border-bottom: 0 none;
+}
+
+.attr-col {
+    height: 60px;
+}
+
+.attr-col > p {
+    margin: 0;
+    position: relative;
+    vertical-align: top;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

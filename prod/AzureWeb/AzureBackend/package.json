@@ -1,0 +1,22 @@
+{
+  "name": "azurebackend_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "joe",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cuid": "^2.1.1",
+    "documentdb": "^1.14.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mssql": "^4.1.0",
+    "request": "^2.86.0",
+    "tedious": "^2.3.1"
+  }
+}

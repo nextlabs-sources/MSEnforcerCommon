@@ -1,0 +1,26 @@
+HKCR
+{
+	SDKWrapper4RMX.Request.1 = s 'Request Class for RMX'
+	{
+		CLSID = s '{BCCB6C98-A429-4683-ADB1-3379FBB3A37B}'
+	}
+	SDKWrapper4RMX.Request = s 'Request Class for RMX'
+	{
+		CLSID = s '{BCCB6C98-A429-4683-ADB1-3379FBB3A37B}'
+		CurVer = s 'SDKWrapper4RMX.Request.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {BCCB6C98-A429-4683-ADB1-3379FBB3A37B} = s 'Request Class for RMX'
+		{
+			ProgID = s 'SDKWrapper4RMX.Request.1'
+			VersionIndependentProgID = s 'SDKWrapper4RMX.Request'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{446EDA37-1AE1-4E8C-A3F1-5084439DA7D5}'
+		}
+	}
+}

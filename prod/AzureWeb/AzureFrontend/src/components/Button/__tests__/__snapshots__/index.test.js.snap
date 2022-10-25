@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should not render loading element <i/> 1`] = `
+<button
+  className="test-class"
+  onClick={[Function]}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <span>
+    TestButton
+  </span>
+</button>
+`;
+
+exports[`Button should render loading element <i/> 1`] = `
+<button
+  className="btn-loading test-class"
+  onClick={null}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <i
+    className="btn-spinner"
+  />
+  <span
+    style={
+      Object {
+        "marginLeft": "14px",
+        "verticalAlign": "top",
+      }
+    }
+  >
+    TestButton
+  </span>
+</button>
+`;

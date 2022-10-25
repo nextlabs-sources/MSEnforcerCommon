@@ -1,0 +1,38 @@
+.arrowIcon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+    vertical-align: top;
+    float: right;
+    top: 50%;
+    margin-top: -8px;
+    margin-right: 12px;
+    transition: all .2s linear;
+    transform-origin: center;      
+}
+
+
+.uncollapse {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    overflow: hidden;
+    margin: 0;
+    font-size: 14px;  
+}
+.dropdown-menu-enter {
+    max-height: 0;    
+}
+.dropdown-menu-enter-active {
+    max-height: 333px;
+    transition: all .2s ease-in-out;    
+}
+.dropdown-menu-exit {
+    max-height: 333px;    
+}
+.dropdown-menu-exit-active {
+    max-height: 0;
+    transition: all .2s ease-in-out;
+}

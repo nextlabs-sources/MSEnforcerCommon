@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render checked one 1`] = `
+<div
+  aria-checked={true}
+  onClick={[Function]}
+  role="checkbox"
+  style={
+    Object {
+      "backgroundClip": "content-box",
+      "backgroundColor": "#06c",
+      "border": "2px solid #06c",
+      "borderRadius": "3px",
+      "boxSizing": "border-box",
+      "cursor": "pointer",
+      "display": "inline-block",
+      "verticalAlign": "top",
+    }
+  }
+  tabIndex={-1}
+>
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMinYMin meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+      fill="#fff"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Checkbox should render unchecked one 1`] = `
+<div
+  aria-checked={false}
+  onClick={[Function]}
+  role="checkbox"
+  style={
+    Object {
+      "backgroundClip": "content-box",
+      "backgroundColor": "#fff",
+      "border": "2px solid #999",
+      "borderRadius": "3px",
+      "boxSizing": "border-box",
+      "cursor": "pointer",
+      "display": "inline-block",
+      "verticalAlign": "top",
+    }
+  }
+  tabIndex={-1}
+>
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMinYMin meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+      fill="#fff"
+    />
+  </svg>
+</div>
+`;

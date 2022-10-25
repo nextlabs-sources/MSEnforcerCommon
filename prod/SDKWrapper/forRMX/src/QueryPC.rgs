@@ -1,0 +1,26 @@
+HKCR
+{
+	SDKWrapper4RMX.QueryPC.1 = s 'QueryPC Class for RMX'
+	{
+		CLSID = s '{B08B7CE3-15C7-48C6-97E4-3171A5E47F8F}'
+	}
+	SDKWrapper4RMX.QueryPC = s 'QueryPC Class  for RMX'
+	{
+		CLSID = s '{B08B7CE3-15C7-48C6-97E4-3171A5E47F8F}'
+		CurVer = s 'SDKWrapper4RMX.QueryPC.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B08B7CE3-15C7-48C6-97E4-3171A5E47F8F} = s 'QueryPC Class  for RMX'
+		{
+			ProgID = s 'SDKWrapper4RMX.QueryPC.1'
+			VersionIndependentProgID = s 'SDKWrapper4RMX.QueryPC'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{446EDA37-1AE1-4E8C-A3F1-5084439DA7D5}'
+		}
+	}
+}

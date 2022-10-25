@@ -1,0 +1,26 @@
+HKCR
+{
+	SDKWrapper.Obligation.1 = s 'Obligation Class'
+	{
+		CLSID = s '{17203775-F60B-4472-8FF5-3A7177D997FF}'
+	}
+	SDKWrapper.Obligation = s 'Obligation Class'
+	{
+		CLSID = s '{17203775-F60B-4472-8FF5-3A7177D997FF}'
+		CurVer = s 'SDKWrapper.Obligation.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {17203775-F60B-4472-8FF5-3A7177D997FF} = s 'Obligation Class'
+		{
+			ProgID = s 'SDKWrapper.Obligation.1'
+			VersionIndependentProgID = s 'SDKWrapper.Obligation'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{4BA69F5E-E3A5-4D6B-B3DC-117B71E7696A}'
+		}
+	}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "azurefrontend_react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "jwt-decode": "^2.2.0",
+    "path-to-regexp": "^2.2.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^2.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "thunk": "0.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "react-test-renderer": "^16.4.1"
+  },
+  "proxy": "http://localhost:4000"
+}

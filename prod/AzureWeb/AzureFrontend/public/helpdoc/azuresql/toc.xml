@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><toc xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns="http://www.oxygenxml.com/ns/webhelp/toc">
+   <title><span xmlns="http://www.w3.org/1999/xhtml" class="booktitle">  <span class="ph mainbooktitle">NextLabs Entitlement Management for Azure SQL</span>  <span class="ph booktitlealt">1.0</span>  <span class="ph booktitlealt">August 2018</span>  </span></title>
+   <topic href="overview.html" data-id="overview" wh-toc-id="overview-d66e20">
+      <title>Overview</title>
+      <shortdesc>
+         <p xmlns="http://www.w3.org/1999/xhtml" class="shortdesc">NextLabs Entitlement Management for Azure SQL, or EM for Azure SQL, provides         attribute based access control of database,
+            its tables, and store procedures         objects.
+         </p>
+      </shortdesc>
+      <topicmeta>
+         <resourceid class="- topic/resourceid " oxy-source="topic" appid="overview"></resourceid>
+         <navtitle class="- topic/navtitle ">Overview</navtitle><?ditaot gentext?>
+         <linktext class="- map/linktext ">Overview</linktext><?ditaot genshortdesc?>
+         <shortdesc class="- map/shortdesc ">NextLabs Entitlement Management for Azure SQL, or EM for Azure SQL, provides         attribute based access control of database,
+            its tables, and store procedures         objects.
+         </shortdesc>
+      </topicmeta>
+   </topic>
+   <topic href="creating_an_azure_active_directory_application.html" data-id="creating_an_azure_active_directory_application" wh-toc-id="creating_an_azure_active_directory_application-d66e32">
+      <title>Creating an Azure Active Directory application</title>
+      <shortdesc>
+         <p xmlns="http://www.w3.org/1999/xhtml" class="shortdesc">This section describes the steps that are required to create an Azure Active         Directory application.</p>
+      </shortdesc>
+      <topicmeta>
+         <resourceid class="- topic/resourceid " oxy-source="topic" appid="creating_an_azure_active_directory_application"></resourceid>
+         <navtitle class="- topic/navtitle ">Creating an Azure Active Directory application</navtitle><?ditaot gentext?>
+         <linktext class="- map/linktext ">Creating an Azure Active Directory application</linktext><?ditaot genshortdesc?>
+         <shortdesc class="- map/shortdesc ">This section describes the steps that are required to create an Azure Active         Directory application.</shortdesc>
+      </topicmeta>
+   </topic>
+   <topic href="granting_permissions_to_a_custom_developed_application.html" data-id="granting_permissions_to_a_custom_developed_application" wh-toc-id="granting_permissions_to_a_custom_developed_application-d66e44">
+      <title>Granting permissions to a custom-developed application</title>
+      <shortdesc>
+         <p xmlns="http://www.w3.org/1999/xhtml" class="shortdesc">This section describes the steps that are required to grant permissions to a         custom-developed application.</p>
+      </shortdesc>
+      <topicmeta>
+         <resourceid class="- topic/resourceid " oxy-source="topic" appid="granting_permissions_to_a_custom_developed_application"></resourceid>
+         <navtitle class="- topic/navtitle ">Granting permissions to a custom-developed application</navtitle><?ditaot gentext?>
+         <linktext class="- map/linktext ">Granting permissions to a custom-developed application</linktext><?ditaot genshortdesc?>
+         <shortdesc class="- map/shortdesc ">This section describes the steps that are required to grant permissions to a         custom-developed application.</shortdesc>
+      </topicmeta>
+   </topic>
+   <topic href="getting_an_application_id_and_an_authentication_key.html" data-id="getting_an_application_id_and_an_authentication_key" wh-toc-id="getting_an_application_id_and_an_authentication_key-d66e56">
+      <title>Getting an application ID and an authentication key</title>
+      <shortdesc>
+         <p xmlns="http://www.w3.org/1999/xhtml" class="shortdesc">This section describes the steps that are required to get your application ID and         authentication key.</p>
+      </shortdesc>
+      <topicmeta>
+         <resourceid class="- topic/resourceid " oxy-source="topic" appid="getting_an_application_id_and_an_authentication_key"></resourceid>
+         <navtitle class="- topic/navtitle ">Getting an application ID and an authentication key</navtitle><?ditaot gentext?>
+         <linktext class="- map/linktext ">Getting an application ID and an authentication key</linktext><?ditaot genshortdesc?>
+         <shortdesc class="- map/shortdesc ">This section describes the steps that are required to get your application ID and         authentication key.</shortdesc>
+      </topicmeta>
+   </topic>
+   <topic href="getting_a_tenant_id.html" data-id="getting_a_tenant_id" wh-toc-id="getting_a_tenant_id-d66e69">
+      <title>Getting a tenant ID</title>
+      <shortdesc>
+         <p xmlns="http://www.w3.org/1999/xhtml" class="shortdesc">This section describes the steps that are required to get your tenant ID.</p>
+      </shortdesc>
+      <topicmeta>
+         <resourceid class="- topic/resourceid " oxy-source="topic" appid="getting_a_tenant_id"></resourceid>
+         <navtitle class="- topic/navtitle ">Getting a tenant ID</navtitle><?ditaot gentext?>
+         <linktext class="- map/linktext ">Getting a tenant ID</linktext><?ditaot genshortdesc?>
+         <shortdesc class="- map/shortdesc ">This section describes the steps that are required to get your tenant ID.</shortdesc>
+      </topicmeta>
+   </topic>
+</toc>

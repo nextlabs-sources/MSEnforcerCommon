@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {5DB9F41D-6BDB-49C3-BBB4-20A7D83E92F4} = s 'FileTagManager Class for RMX'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			TypeLib = s '{446EDA37-1AE1-4E8C-A3F1-5084439DA7D5}'
+			Version = s '1.0'
+		}
+	}
+}

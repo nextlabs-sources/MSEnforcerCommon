@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntityCard should render checked entity 1`] = `
+<div>
+  <div
+    onClick={[Function]}
+    role="button"
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": "4px",
+        "boxShadow": "0 0 4px 1px #ccc",
+        "cursor": "pointer",
+        "fontSize": "0",
+        "height": "100px",
+        "margin": "32px 20px",
+        "padding": "10px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+          "fontSize": "16px",
+          "padding": "1.2em 24px 24px",
+          "textAlign": "center",
+          "verticalAlign": "top",
+        }
+      }
+    >
+      <div
+        aria-checked={false}
+        onClick={[Function]}
+        role="checkbox"
+        style={
+          Object {
+            "backgroundClip": "content-box",
+            "backgroundColor": "#fff",
+            "border": "2px solid #999",
+            "borderRadius": "3px",
+            "boxSizing": "border-box",
+            "cursor": "pointer",
+            "display": "inline-block",
+            "height": "24px",
+            "verticalAlign": "top",
+            "width": "24px",
+          }
+        }
+        tabIndex={-1}
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="100%"
+          preserveAspectRatio="xMinYMin meet"
+          viewBox="0 0 24 24"
+          width="100%"
+        >
+          <path
+            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+            fill="#fff"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+          "fontSize": "16px",
+          "textAlign": "left",
+        }
+      }
+    >
+      <h3
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": "inherti",
+            "fontWeight": "400",
+            "marginTop": "1em",
+          }
+        }
+      >
+        Account
+      </h3>
+      <p
+        style={
+          Object {
+            "color": "#999",
+            "fontSize": "11px",
+          }
+        }
+      >
+        Account Mock
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntityCard should render unchecked entity 1`] = `
+<div>
+  <div
+    onClick={[Function]}
+    role="button"
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": "4px",
+        "boxShadow": "0 0 4px 1px #ccc",
+        "cursor": "pointer",
+        "fontSize": "0",
+        "height": "100px",
+        "margin": "32px 20px",
+        "padding": "10px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+          "fontSize": "16px",
+          "padding": "1.2em 24px 24px",
+          "textAlign": "center",
+          "verticalAlign": "top",
+        }
+      }
+    >
+      <div
+        aria-checked={false}
+        onClick={[Function]}
+        role="checkbox"
+        style={
+          Object {
+            "backgroundClip": "content-box",
+            "backgroundColor": "#fff",
+            "border": "2px solid #999",
+            "borderRadius": "3px",
+            "boxSizing": "border-box",
+            "cursor": "pointer",
+            "display": "inline-block",
+            "height": "24px",
+            "verticalAlign": "top",
+            "width": "24px",
+          }
+        }
+        tabIndex={-1}
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="100%"
+          preserveAspectRatio="xMinYMin meet"
+          viewBox="0 0 24 24"
+          width="100%"
+        >
+          <path
+            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+            fill="#fff"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+          "fontSize": "16px",
+          "textAlign": "left",
+        }
+      }
+    >
+      <h3
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": "inherti",
+            "fontWeight": "400",
+            "marginTop": "1em",
+          }
+        }
+      >
+        Account
+      </h3>
+      <p
+        style={
+          Object {
+            "color": "#999",
+            "fontSize": "11px",
+          }
+        }
+      >
+        Account Mock
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,26 @@
+HKCR
+{
+	SDKWrapper4RMX.CEAttres.1 = s 'CEAttres Class for RMX'
+	{
+		CLSID = s '{B084417B-7A9F-4C83-A0B6-1178AE33A8C1}'
+	}
+	SDKWrapper4RMX.CEAttres = s 'CEAttres Class  for RMX'
+	{
+		CLSID = s '{B084417B-7A9F-4C83-A0B6-1178AE33A8C1}'
+		CurVer = s 'SDKWrapper4RMX.CEAttres.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B084417B-7A9F-4C83-A0B6-1178AE33A8C1} = s 'CEAttres Class for RMX '
+		{
+			ProgID = s 'SDKWrapper4RMX.CEAttres.1'
+			VersionIndependentProgID = s 'SDKWrapper4RMX.CEAttres'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{446EDA37-1AE1-4E8C-A3F1-5084439DA7D5}'
+		}
+	}
+}

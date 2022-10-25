@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {148D759E-5CD1-4CF2-90EB-A36BD68110AE} = s 'NLRightsManager Class for RMX'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{446EDA37-1AE1-4E8C-A3F1-5084439DA7D5}'
+			Version = s '1.0'
+		}
+	}
+}

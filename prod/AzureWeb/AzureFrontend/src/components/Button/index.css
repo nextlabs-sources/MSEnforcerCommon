@@ -1,0 +1,32 @@
+.btn-loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .4);    
+}
+.btn-spinner {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    color: #fff;
+    width: 14px;
+    height: 14px;
+    margin-left: -14px;
+}
+.btn-spinner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    border-radius: 14px;
+    animation: spinning ease-in-out .8s infinite;    
+}

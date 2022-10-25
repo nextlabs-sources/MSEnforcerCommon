@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="overview" path="overview.html"/>
+   <appContext helpID="creating_an_azure_active_directory_application"
+               path="creating_an_azure_active_directory_application.html"/>
+   <appContext helpID="granting_permissions_to_a_custom_developed_application"
+               path="granting_permissions_to_a_custom_developed_application.html"/>
+   <appContext helpID="getting_an_application_id_and_an_authentication_key"
+               path="getting_an_application_id_and_an_authentication_key.html"/>
+   <appContext helpID="getting_a_tenant_id" path="getting_a_tenant_id.html"/>
+</map>

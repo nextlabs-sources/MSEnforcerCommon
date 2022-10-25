@@ -1,0 +1,152 @@
+/* button types */
+.btn-default {
+    color: #333;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.btn-default:hover {
+    color: #06c;
+    border-color: #06c;
+}
+.btn-primary {
+    color: #fff;
+    background: #06c;
+}
+.btn-primary:hover {
+    background: #069;
+}
+.btn-error {
+    color: #fff;
+    background: #c03;
+}
+.btn-error:hover {
+    background: #903;
+}
+
+/* button sizes */
+.btn-sm {
+    width: 100px;
+    height: 36px;
+}
+.btn-md {
+    width: 140px;
+    height: 36px;
+}
+.btn-lg {
+    width: 200px;
+    height: 36px;
+}
+
+/* layouts */
+.col {
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+.col-border {
+    border-width: 0 1px 0;
+    border-style: solid;
+}
+.col-1 {
+    width: 10%;
+}
+.col-2 {
+    width: 20%;
+}
+.col-3 {
+    width: 30%;
+}
+.col-4 {
+    width: 40%;
+}
+.col-5 {
+    width: 50%;
+}
+.col-6 {
+    width: 60%;
+}
+.col-7 {
+    width: 70%;
+}
+.col-8 {
+    width: 80%;
+}
+.col-9 {
+    width: 90%;
+}
+.col-10 {
+    width: 100%;
+}
+
+/* animation */
+.fade {
+
+}
+.fade-enter {
+    opacity: 0.01;
+}
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+.fade-exit {
+    opacity: 1;
+}
+.fade-exit-active {
+    opacity: 0.01;
+    transition: opacity .2s linear;
+}
+.slide {
+
+}
+.slide-enter {
+    opacity: 0.01;
+    right: -400px;
+}
+.slide-enter-active {
+    opacity: 1;
+    right: 0;
+    transition: all .2s linear;    
+}
+.slide-enter-done {
+    right: 0;
+}
+.slide-exit {
+    opacity: 1;
+    right: 0;
+}
+.slide-exit-active {
+    opacity: 0.01;
+    right: -400px;
+    transition: all .2s linear;    
+}
+.slide-exit-done {
+    right: -400px;
+}
+/* misc */
+#modalRoot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+#errorRoot {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+.hide {
+    display: none;
+}
+.toolbar-btn {
+    margin: 0 16px;
+}
+.modal-btn {
+    margin: 10px 15px;    
+}

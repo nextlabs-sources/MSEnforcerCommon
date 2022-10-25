@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<JPCConfig>
+  <!--Policy control host URL-->
+  <JPCHost>http://JPC202004.qapf1.qalab01.nextlabs.com:58080</JPCHost>
+  <!--OAUTH server host URL-->
+  <OAuthHost>https://CC202004.qapf1.qalab01.nextlabs.com</OAuthHost>
+  <!--Client ID used to connect PC-->
+  <ClientID>apiclient</ClientID>
+  <!--Client secret number which encrypt by NLEncipher-->
+  <ClientSecureCipherText>0+Xk7sGT1KDW1EsaMUURug==</ClientSecureCipherText>
+</JPCConfig>

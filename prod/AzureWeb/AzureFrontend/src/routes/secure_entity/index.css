@@ -1,0 +1,23 @@
+@keyframes spinning {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.load-spinner {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 4px solid #06c;
+    border-radius: 30px;
+    border-color: #06c transparent #06c;
+    margin: 30px auto auto;
+    animation: spinning ease-in-out 1s infinite;
+}

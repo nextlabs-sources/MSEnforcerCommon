@@ -1,0 +1,66 @@
+<boolean expression> ::= <predicate> { <logic op> <predicate> }...
+
+<predicate> ::= <value> <predicate op> <value>
+    | <left paren> <boolean expression> <right paren>
+    | NOT <predicate>
+
+<value> ::= <column ref> | <string literal> | <dec number literal> | NULL
+    | <left bracket> <value list> <right bracket>
+
+<value list> ::= <value> { <comma> <value> }...
+
+<column ref> ::= <type> <dot> <identifier list>
+    | <identifier>      /* this means a variable defined in cc  */
+
+<identifier list> ::= <identifier> { <dot> <identifier> }...
+
+<logic op> ::= OR | AND
+
+<predicate op> ::= <compare op> | <special op>
+
+<compare op> ::= <equal> | <not equal> | <less than> | <less than or equal> | <greater than> | <greater than or equal>
+
+<special op> ::= EQUALS_UNORDERED | INCLUDES
+
+<dot> ::= .
+
+<equal> ::= =
+
+<not equal> ::= !=
+
+<less than> ::= <
+
+<less than or equal> ::= <=
+
+<greater than> ::= >
+
+<greater than or equal> ::= >=
+
+<left paren> ::= (
+
+<right paren> ::= )
+
+<left bracket> ::= [
+
+<right bracket> ::= ]
+
+<identifier> ::= <simple identifier>
+    | <string literal>
+
+<simple identifier> ::= !! See the Syntax Rules Of Lex
+
+<string literal> ::= !! See the Syntax Rules Of Lex
+
+<dec number literal> ::= !! See the Syntax Rules Of Lex
+
+<type> ::= HOST | USER | APPLICATION | RESOURCE
+
+//add by jeff
+
+<call_function> ::= call_function <left paren>  <param_list>   <right paren>
+
+<param_list> ::= <value> { <comma> <value> }...
+
+<comma> ::= ,
+
+
